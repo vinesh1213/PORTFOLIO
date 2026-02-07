@@ -1,0 +1,224 @@
+:root {
+    --bg: #0f0f0f;
+    --text: #ffffff;
+    --accent: #00ffcc;
+    --card: #1a1a1a;
+}
+
+.light {
+    --bg: #ffffff;
+    --text: #000000;
+    --card: #f2f2f2;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: var(--bg);
+    color: var(--text);
+    transition: 0.3s;
+}
+
+/* NAVBAR */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 40px;
+    background: black;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+}
+
+.right-icons {
+    display: flex;
+    gap: 15px;
+}
+
+#theme-toggle {
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 26px;
+    cursor: pointer;
+}
+
+/* HERO */
+.hero {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.hero span {
+    color: var(--accent);
+}
+
+.resume-btn {
+    margin-top: 20px;
+    padding: 10px 25px;
+    border: 1px solid var(--accent);
+    text-decoration: none;
+    color: var(--text);
+}
+
+.resume-icon {
+    margin-right: 8px;
+    vertical-align: middle;
+}
+
+/* SECTIONS */
+section {
+    padding: 80px 40px;
+    text-align: center;
+}
+
+.skills-container,
+.projects-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.skill-box {
+    border: 1px solid var(--accent);
+    padding: 12px 25px;
+}
+
+.skill-box:hover {
+    background: var(--accent);
+    color: black;
+}
+
+/* PROJECTS */
+.project-card {
+    background: var(--card);
+    padding: 20px;
+    width: 280px;
+}
+
+.btn-group a {
+    padding: 8px 15px;
+    border: 1px solid var(--accent);
+    text-decoration: none;
+    margin: 5px;
+    display: inline-block;
+    color: var(--text);
+}
+
+.disabled {
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+/* FOOTER */
+footer {
+    background: black;
+    padding: 20px;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 100%;
+        background: black;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+}
+.certificates-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.certificate-card {
+    background: var(--card);
+    padding: 25px;
+    width: 300px;
+    border: 1px solid var(--accent);
+    text-align: center;
+    transition: 0.3s;
+}
+
+.certificate-card:hover {
+    transform: translateY(-5px);
+}
+
+.certificate-card h3 {
+    margin-bottom: 8px;
+}
+
+.certificate-card a {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 8px 20px;
+    border: 1px solid var(--accent);
+    color: var(--text);
+    text-decoration: none;
+}
+
+.certificate-card a:hover {
+    background: var(--accent);
+    color: black;
+}
+
+/* Certificates grid: view vs download columns */
+.certs-grid {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.certs-column {
+    min-width: 260px;
+    max-width: 520px;
+    text-align: left;
+}
+
+.certs-column h3 {
+    margin-bottom: 12px;
+}
