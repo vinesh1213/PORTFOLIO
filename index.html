@@ -1,152 +1,281 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Vinesh | Portfolio</title>
-
-<link rel="stylesheet" href="style.css">
-<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vinesh — Developer & Engineer</title>
+    <meta name="description" content="Portfolio of Vinesh — ECE student, Python developer, frontend engineer, and machine learning enthusiast.">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
+<!-- NOISE OVERLAY -->
+<div class="noise-overlay" aria-hidden="true"></div>
+
+<!-- CURSOR FOLLOWER -->
+<div class="cursor-follower" id="cursor-follower" aria-hidden="true"></div>
+
 <!-- NAVBAR -->
 <header>
-<nav class="navbar">
-<h2 class="logo">Vinesh</h2>
+    <nav class="navbar" id="navbar">
+        <div class="logo">V<span>.</span></div>
 
-<ul class="nav-links">
-<li><a href="#home">Home</a></li>
-<li><a href="#about">About</a></li>
-<li><a href="#skills">Skills</a></li>
-<li><a href="#projects">Projects</a></li>
-<li><a href="#certificates">Certificates</a></li>
-<li><a href="#contact">Contact</a></li>
-</ul>
+        <ul class="nav-links" id="nav-links">
+            <li><a href="#home" class="active">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#certificates">Certificates</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
 
-<div class="right-icons">
-<button id="theme-toggle">🌙</button>
-<div class="menu-toggle" id="menu-toggle">☰</div>
-</div>
-</nav>
+        <div class="nav-right">
+            <button id="theme-toggle" aria-label="Toggle theme">🌙</button>
+            <div class="hamburger" id="hamburger" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
 </header>
 
 <!-- HERO -->
 <section id="home" class="hero">
-<h1 data-aos="fade-up">Hi, I'm <span>Vinesh</span></h1>
-<h2 data-aos="fade-up"><span id="typing"></span></h2>
+    <div class="hero-content">
+        <div class="hero-text">
+            <p class="hero-greeting">Hello, I'm</p>
+            <h1 class="hero-name">Vin<span class="accent">e</span>sh</h1>
+            <div class="hero-role">
+                <span id="typed-text"></span><span class="typed-cursor">|</span>
+            </div>
+            <p class="hero-description">
+                An electronics & communication engineering student with a passion for building
+                intelligent systems and beautiful digital experiences.
+            </p>
+            <div class="hero-actions">
+                <a href="assets/r_vinesh_resume_reference_style.pdf" class="btn-primary" target="_blank" id="resume-btn">
+                    View Resume ↗
+                </a>
+                <a href="#contact" class="btn-outline" id="contact-btn">
+                    Get in Touch
+                </a>
+            </div>
+        </div>
 
-<a href="assets/r_vinesh_resume_reference_style.pdf" class="resume-btn" target="_blank">
-📄 View Resume
-</a>
+        <div class="hero-geometric" aria-hidden="true">
+            <div class="geo-ring"><div class="geo-dot"></div></div>
+            <div class="geo-ring"><div class="geo-dot"></div></div>
+            <div class="geo-ring"><div class="geo-dot"></div></div>
+        </div>
+    </div>
+
+    <div class="hero-scroll-indicator">
+        <span>Scroll</span>
+        <div class="scroll-line"></div>
+    </div>
 </section>
 
 <!-- ABOUT -->
-<section id="about" data-aos="fade-right">
-<h2>About Me</h2>
-<p>
-I'm <b>Vinesh</b>, a student from <b>SRM Valliammai Engineering College</b>,
-pursuing <b>B.E. Electronics and Communication Engineering</b> (2023–2027).
-<br><br>
-Interested in <b>Python</b>, <b>Frontend Development</b>, and <b>Machine Learning</b>.
-</p>
+<section id="about">
+    <div class="section-container">
+        <div class="section-label reveal">About</div>
+        <div class="about-grid">
+            <div class="about-quote reveal reveal-delay-1">
+                "Bridging hardware and software — building at the intersection of engineering and intelligence."
+            </div>
+            <div class="about-details">
+                <h3 class="reveal reveal-delay-2">Who I Am</h3>
+                <p class="reveal reveal-delay-3">
+                    I'm <strong>Vinesh</strong>, a student at <strong>SRM Valliammai Engineering College</strong>,
+                    pursuing <strong>B.E. Electronics and Communication Engineering</strong> (2023–2027).
+                    I'm passionate about creating seamless digital experiences through frontend development,
+                    and building intelligent systems with Python and machine learning.
+                </p>
+
+                <div class="about-info-grid">
+                    <div class="about-info-item reveal reveal-delay-3">
+                        <div class="label">Education</div>
+                        <div class="value">B.E. ECE</div>
+                    </div>
+                    <div class="about-info-item reveal reveal-delay-4">
+                        <div class="label">University</div>
+                        <div class="value">SRM VEC</div>
+                    </div>
+                    <div class="about-info-item reveal reveal-delay-5">
+                        <div class="label">Year</div>
+                        <div class="value">2023 – 2027</div>
+                    </div>
+                    <div class="about-info-item reveal reveal-delay-6">
+                        <div class="label">Focus</div>
+                        <div class="value">AI & Web Dev</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </section>
 
 <!-- SKILLS -->
-<section id="skills" data-aos="fade-left">
-<h2>Skills</h2>
+<section id="skills">
+    <div class="section-container">
+        <div class="section-label reveal">Skills</div>
+        <h2 class="section-title reveal reveal-delay-1">What I Work With</h2>
 
-<div class="skills-container">
-<div class="skill-box">Python</div>
-<div class="skill-box">HTML</div>
-<div class="skill-box">CSS</div>
-<div class="skill-box">JavaScript</div>
-<div class="skill-box">Machine Learning</div>
-<div class="skill-box">Frontend Development</div>
-</div>
+        <div class="skills-grid">
+            <div class="skill-card reveal reveal-delay-1" id="skill-1">
+                <span class="skill-icon">🐍</span>
+                <h3>Python</h3>
+                <p>Scripting, automation, data analysis & ML workflows</p>
+            </div>
+            <div class="skill-card reveal reveal-delay-2" id="skill-2">
+                <span class="skill-icon">◈</span>
+                <h3>HTML & CSS</h3>
+                <p>Semantic markup, responsive layouts & modern CSS</p>
+            </div>
+            <div class="skill-card reveal reveal-delay-3" id="skill-3">
+                <span class="skill-icon">⚡</span>
+                <h3>JavaScript</h3>
+                <p>DOM manipulation, async patterns & interactivity</p>
+            </div>
+            <div class="skill-card reveal reveal-delay-4" id="skill-4">
+                <span class="skill-icon">🧠</span>
+                <h3>Machine Learning</h3>
+                <p>Supervised learning, neural networks & model training</p>
+            </div>
+            <div class="skill-card reveal reveal-delay-5" id="skill-5">
+                <span class="skill-icon">🎨</span>
+                <h3>Frontend Dev</h3>
+                <p>Component design, animations & user experience</p>
+            </div>
+            <div class="skill-card reveal reveal-delay-6" id="skill-6">
+                <span class="skill-icon">📡</span>
+                <h3>IoT & Electronics</h3>
+                <p>Sensor integration, embedded systems & circuits</p>
+            </div>
+        </div>
+    </div>
 </section>
 
 <!-- PROJECTS -->
-<section id="projects" data-aos="zoom-in">
-<h2>Projects</h2>
+<section id="projects">
+    <div class="section-container">
+        <div class="section-label reveal">Projects</div>
+        <h2 class="section-title reveal reveal-delay-1">Selected Work</h2>
 
-<div class="projects-container">
+        <div class="projects-grid">
+            <div class="project-card reveal reveal-delay-2" id="project-1">
+                <div class="project-number">01</div>
+                <h3>IoT Water Monitoring</h3>
+                <p>Real-time water quality monitoring system using IoT sensors and machine learning for predictive analysis and alerts.</p>
+                <div class="project-tech">
+                    <span>Python</span>
+                    <span>IoT</span>
+                    <span>ML</span>
+                    <span>Sensors</span>
+                </div>
+                <div class="project-links">
+                    <a href="https://github.com/vinesh1213" target="_blank">
+                        GitHub <span class="arrow">→</span>
+                    </a>
+                    <a class="disabled">
+                        Live Demo <span class="arrow">→</span>
+                    </a>
+                </div>
+            </div>
 
-<div class="project-card">
-<h3>IoT Water Monitoring</h3>
-<p>Real-time water quality monitoring using sensors & ML.</p>
-<div class="btn-group">
-<a href="https://github.com/vinesh1213" target="_blank">GitHub</a>
-<a class="disabled">Live</a>
-</div>
-</div>
-
-<div class="project-card">
-<h3>Portfolio Website</h3>
-<p>Responsive portfolio built with HTML, CSS & JS.</p>
-<div class="btn-group">
-<a href="https://github.com/vinesh1213" target="_blank">GitHub</a>
-<a class="disabled">Live</a>
-</div>
-</div>
-
-</div>
+            <div class="project-card reveal reveal-delay-3" id="project-2">
+                <div class="project-number">02</div>
+                <h3>Portfolio Website</h3>
+                <p>A fully responsive, editorial-style portfolio featuring scroll animations, 3D interactions, and a refined dark theme.</p>
+                <div class="project-tech">
+                    <span>HTML</span>
+                    <span>CSS</span>
+                    <span>JavaScript</span>
+                </div>
+                <div class="project-links">
+                    <a href="https://github.com/vinesh1213" target="_blank">
+                        GitHub <span class="arrow">→</span>
+                    </a>
+                    <a class="disabled">
+                        Live Demo <span class="arrow">→</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
 </section>
 
 <!-- CERTIFICATES -->
-<section id="certificates" data-aos="fade-up">
-<h2>Certificates</h2>
+<section id="certificates">
+    <div class="section-container">
+        <div class="section-label reveal">Certificates</div>
+        <h2 class="section-title reveal reveal-delay-1">Credentials & Courses</h2>
 
-<div class="certificates-container">
+        <div class="certificates-grid">
+            <div class="certificate-card reveal reveal-delay-2" id="cert-1">
+                <div class="cert-issuer">NVIDIA</div>
+                <h3>Building LLM Applications with Prompt Engineering</h3>
+                <p class="cert-meta">Issued: Feb 2026</p>
+                <a href="assets/certificates/My%20Learning%20_%20NVIDIA.pdf" target="_blank" class="cert-link">
+                    View Certificate <span class="arrow">→</span>
+                </a>
+            </div>
 
-<!-- NVIDIA -->
-<div class="certificate-card">
-<h3>Building LLM Applications with Prompt Engineering</h3>
-<p><b>NVIDIA</b></p>
-<p>Issued: Feb 2026</p>
-<a href="assets/certificates/My%20Learning%20_%20NVIDIA.pdf" target="_blank">
-View Certificate
-</a>
-</div>
+            <div class="certificate-card reveal reveal-delay-3" id="cert-2">
+                <div class="cert-issuer">Glowlogics Solutions</div>
+                <h3>Artificial Intelligence Internship</h3>
+                <p class="cert-meta">Mar 2025 – May 2025</p>
+                <a href="assets/certificates/internship-2025-glowlogics.pdf" target="_blank" class="cert-link">
+                    View Certificate <span class="arrow">→</span>
+                </a>
+            </div>
 
-<!-- Internship -->
-<div class="certificate-card">
-<h3>Artificial Intelligence Internship</h3>
-<p><b>Glowlogics Solutions</b></p>
-<p>Mar 2025 – May 2025</p>
-<a href="assets/certificates/internship-2025-glowlogics.pdf" target="_blank">
-View Certificate
-</a>
-</div>
-
-<!-- Course -->
-<div class="certificate-card">
-<h3>Artificial Intelligence Certification</h3>
-<p><b>Glowlogics Solutions</b></p>
-<p>Grade: A+</p>
-<a href="assets/certificates/course-completion-glowlogics.pdf" target="_blank">
-View Certificate
-</a>
-</div>
-
-</div>
+            <div class="certificate-card reveal reveal-delay-4" id="cert-3">
+                <div class="cert-issuer">Glowlogics Solutions</div>
+                <h3>AI Certification — Grade: A+</h3>
+                <p class="cert-meta">Course Completion</p>
+                <a href="assets/certificates/course-completion-glowlogics.pdf" target="_blank" class="cert-link">
+                    View Certificate <span class="arrow">→</span>
+                </a>
+            </div>
+        </div>
+    </div>
 </section>
 
 <!-- CONTACT -->
-<section id="contact" data-aos="fade-up">
-<h2>Contact</h2>
-<p>Email: <a href="mailto:vineshr833@gmail.com">vineshr833@gmail.com</a></p>
-<p>GitHub: <a href="https://github.com/vinesh1213" target="_blank">vinesh1213</a></p>
+<section id="contact" class="contact-section">
+    <div class="section-container">
+        <div class="section-label reveal" style="justify-content: center;">Contact</div>
+        <h2 class="contact-heading reveal reveal-delay-1">
+            Let's Build Something<br><span class="accent">Together.</span>
+        </h2>
+        <p class="contact-sub reveal reveal-delay-2">
+            Open to opportunities, collaborations, and interesting conversations.
+        </p>
+        <div class="contact-links reveal reveal-delay-3">
+            <a href="mailto:vineshr833@gmail.com" class="contact-link" id="email-link">
+                <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+                vineshr833@gmail.com
+            </a>
+            <a href="https://github.com/vinesh1213" target="_blank" class="contact-link" id="github-link">
+                <svg viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .322.218.694.825.576C20.565 21.795 24 17.298 24 12c0-6.63-5.37-12-12-12z"/></svg>
+                vinesh1213
+            </a>
+        </div>
+    </div>
 </section>
 
+<!-- FOOTER -->
 <footer>
-<p>© 2026 Vinesh. All rights reserved.</p>
+    <div class="footer-container">
+        <p>© 2026 Vinesh. All rights reserved.</p>
+        <div class="footer-accent"></div>
+    </div>
 </footer>
 
 <script src="script.js"></script>
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script>AOS.init({ duration: 1000, once: true });</script>
 
 </body>
 </html>
